@@ -6,7 +6,6 @@
 int main()
 {
     setlocale(0, "rus");
-    std::cout << "Hello\n";
     char number[100];
     int count = 0;
     std::cout << "Введите х если хотите завершить ввод\n";
