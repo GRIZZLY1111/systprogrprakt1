@@ -14,7 +14,7 @@ int main()
     while (std::cin >> digit) {
         if (digit == 'x')
             break;
-        if (digit >= '0' && digit <= '9') {
+        if (digit == '0' || digit == '1' || digit == '2' || digit == '3' || digit == '4' || digit == '5' || digit == '6' || digit == '7' || digit == '8' || digit == '9') {
             number[count] = digit;
             count++;
         }
@@ -25,18 +25,18 @@ int main()
     char result[100];
     int rescount = 0;
     int i = 0;
+    int j = 1;
     while (i < count) {
         char n = number[i];
         int povtdigit = 0;
-        int j = 1;
         while (j < count && number[j] == n) {
             povtdigit++;
             j++;
         }
         i = j;
         j++;
-        if (povtdigit < 3) {
-            for(int k=0; k<povtdigit;k++){
+        if (povtdigit < 2) {
+            for(int k=0; k<povtdigit+1;k++){
                 result[rescount] = n;
                 rescount++;
             }
